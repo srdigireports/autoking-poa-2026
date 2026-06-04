@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto King — Paid Media Plan of Action · June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#39FF14;--gd:rgba(57,255,20,.12);--gd2:rgba(57,255,20,.06);
+  --glow:0 0 18px rgba(57,255,20,.45),0 0 50px rgba(57,255,20,.18);
+  --glow-sm:0 0 10px rgba(57,255,20,.4);
+  --sv:#b8b8c0;--bg:#020202;--bg2:#070707;--bg3:#0d0d0d;
+  --card:rgba(255,255,255,.028);--br:rgba(57,255,20,.16);--brd:rgba(255,255,255,.06);
+  --t1:#e0e0e0;--t2:#7a8a9e;--t3:#3a4a5e;
+  --red:#FF3B5C;--redd:rgba(255,59,92,.1);
+  --org:#FF8A00;--orgd:rgba(255,138,0,.1);
+  --gold:#E8A000;--gld:rgba(232,160,0,.1);
+  --blu:#38bdf8;--blud:rgba(56,189,248,.09);
+  --f:'Raleway',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--t1);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--g);border-radius:2px}
+
+/* ── TYPOGRAPHY ── */
+h2{font-size:clamp(1.55rem,3.5vw,2.6rem);font-weight:900;letter-spacing:-.02em;line-height:1.1}
+h3{font-size:clamp(1rem,2vw,1.25rem);font-weight:800;letter-spacing:-.01em}
+h4{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--t2)}
+p{color:var(--t2);line-height:1.75;font-size:.85rem}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.55rem 2rem;background:rgba(2,2,2,.94);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--br);
+}
+.nl{display:flex;gap:.15rem;flex-wrap:wrap}
+.nl a{
+  font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--t3);text-decoration:none;padding:.28rem .6rem;border-radius:4px;
+  transition:color .2s,background .2s;white-space:nowrap;
+}
+.nl a:hover,.nl a.act{color:var(--g);background:var(--gd)}
+.nav-logo-img{height:22px;width:auto;filter:brightness(0) invert(1)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  position:relative;padding:8rem 2rem 5rem;
+}
+.hbg{position:absolute;inset:0;z-index:0}
+.hbg::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(57,255,20,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(57,255,20,.035) 1px,transparent 1px);
+  background-size:55px 55px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 0%,transparent 75%);
+}
+.hbg::after{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%,rgba(57,255,20,.06) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 30% at 80% 80%,rgba(57,255,20,.03) 0%,transparent 60%);
+}
+.scanline{
+  position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(57,255,20,.4),transparent);
+  animation:scan 4s linear infinite;opacity:.5;z-index:1;
+}
+@keyframes scan{0%{top:0;opacity:.5}100%{top:100vh;opacity:0}}
+.hi{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%}
+
+.hbadge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--g);border:1px solid var(--br);
+  padding:.28rem .9rem;border-radius:50px;background:var(--gd);margin-bottom:1.5rem;
+}
+.hbadge::before{
+  content:'';width:5px;height:5px;background:var(--g);border-radius:50%;
+  animation:blink 1.4s infinite;box-shadow:var(--glow-sm);
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+.logo-wrap{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.6rem}
+.logo-css{display:flex;flex-direction:column;gap:.18rem}
+.logo-wordmark{display:flex;align-items:baseline;line-height:1}
+.lw-a{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;font-style:italic;color:#fff;letter-spacing:-.02em}
+.lw-k{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;font-style:italic;color:var(--sv);letter-spacing:.02em;margin-left:.08em}
+.lw-r{font-size:.7em;font-weight:400;font-style:normal;color:var(--t3);vertical-align:super;margin-left:.04em}
+.lw-sub{font-size:.55rem;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--g);text-shadow:var(--glow-sm)}
+
+.logo-img{height:44px;width:auto;filter:brightness(0) invert(1);display:block;}
+.logo-tagline{
+  display:flex;flex-direction:column;gap:.15rem;
+  border-left:1px solid var(--br);padding-left:1.2rem;
+}
+.logo-tagline span{
+  font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--t3);line-height:1.3;
+}
+.logo-tagline span.gn{color:var(--g);text-shadow:var(--glow-sm)}
+
+.htitle{margin-bottom:.8rem}
+.htitle .line1{display:block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.22em;color:var(--t3);margin-bottom:.5rem}
+.htitle h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:900;line-height:1.02;letter-spacing:-.025em;color:var(--t1)}
+.htitle .ac{color:var(--g);text-shadow:var(--glow);animation:glw 3s ease infinite}
+@keyframes glw{0%,100%{text-shadow:var(--glow)}50%{text-shadow:0 0 40px rgba(57,255,20,.75),0 0 80px rgba(57,255,20,.3)}}
+
+.hmeta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1.4rem 0 2.5rem}
+.hm{font-size:.62rem;font-weight:600;color:var(--t2);letter-spacing:.05em}
+.hd{width:1px;height:11px;background:var(--t3)}
+
+/* KPI GRID */
+.kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.7rem}
+@media(max-width:900px){.kpi-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.kc{
+  background:var(--card);border:1px solid var(--brd);border-radius:10px;
+  padding:.9rem 1rem;position:relative;overflow:hidden;
+  transition:border-color .3s,transform .3s;cursor:default;
+}
+.kc:hover{transform:translateY(-3px)}
+.kc::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(57,255,20,.06) 0%,transparent 55%);
+  opacity:0;transition:opacity .3s;
+}
+.kc:hover::before{opacity:1}
+.kc.kr{border-color:rgba(255,59,92,.2)}.kc.ko{border-color:rgba(255,138,0,.2)}
+.kc.kg{border-color:rgba(57,255,20,.22)}.kc.kgold{border-color:rgba(232,160,0,.2)}
+.kv{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;line-height:1.1;margin-bottom:.2rem}
+.kc.kr .kv{color:var(--red)}.kc.ko .kv{color:var(--org)}
+.kc.kg .kv{color:var(--g);text-shadow:var(--glow-sm)}.kc.kgold .kv{color:var(--gold)}
+.kl{font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--t3);line-height:1.4}
+
+/* ── SECTION WRAPPER ── */
+.sw{padding:5rem 2rem}
+.sw2{padding:5rem 2rem;background:var(--bg2);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd)}
+.si{max-width:1100px;margin:0 auto}
+.stag{
+  display:inline-block;font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.18em;
+  color:var(--g);border:1px solid var(--br);
+  padding:.22rem .8rem;border-radius:3px;background:var(--gd);margin-bottom:1.1rem;
+}
+.shd{margin-bottom:2.5rem}
+.shd h2{margin:.3rem 0 .6rem}
+.shd p{max-width:680px}
+.div{height:1px;background:linear-gradient(90deg,transparent,var(--br),transparent)}
+
+/* ── PHASE HEADER ── */
+.ph{
+  display:flex;align-items:flex-start;gap:1.4rem;
+  padding:1.4rem;background:var(--card);border-radius:12px;
+  border:1px solid var(--brd);margin-bottom:2rem;
+}
+.phn{
+  width:50px;height:50px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.25rem;font-weight:900;
+}
+.ph.r .phn{background:var(--redd);color:var(--red);border:2px solid rgba(255,59,92,.3)}
+.ph.o .phn{background:var(--orgd);color:var(--org);border:2px solid rgba(255,138,0,.3)}
+.ph.b .phn{background:var(--blud);color:var(--blu);border:2px solid rgba(56,189,248,.25)}
+.ph.g .phn{background:var(--gd);color:var(--g);border:2px solid rgba(57,255,20,.28)}
+.ph.gold .phn{background:var(--gld);color:var(--gold);border:2px solid rgba(232,160,0,.28)}
+.ph.sv .phn{background:rgba(180,180,200,.05);color:var(--sv);border:2px solid rgba(180,180,200,.18)}
+.phm{flex:1}
+.phtag{
+  font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;
+  display:inline-block;padding:.2rem .6rem;border-radius:3px;margin-bottom:.35rem;
+}
+.ph.r .phtag{background:var(--redd);color:var(--red)}
+.ph.o .phtag{background:var(--orgd);color:var(--org)}
+.ph.b .phtag{background:var(--blud);color:var(--blu)}
+.ph.g .phtag{background:var(--gd);color:var(--g)}
+.ph.gold .phtag{background:var(--gld);color:var(--gold)}
+.ph.sv .phtag{background:rgba(180,180,200,.05);color:var(--sv)}
+.phm h3{margin-bottom:.25rem}
+
+/* ── DELIVERABLE LIST ── */
+.dl{display:flex;flex-direction:column;gap:.55rem}
+.di{
+  display:flex;align-items:flex-start;gap:.85rem;
+  padding:.75rem 1rem;border-radius:8px;
+  background:rgba(255,255,255,.02);border:1px solid var(--brd);
+  transition:border-color .25s,background .25s,transform .25s;
+}
+.di:hover{border-color:var(--br);background:var(--gd2);transform:translateX(3px)}
+.din{
+  font-size:.58rem;font-weight:800;letter-spacing:.06em;
+  padding:.2rem .42rem;border-radius:3px;flex-shrink:0;margin-top:.1rem;
+}
+.ph.r .din{background:var(--redd);color:var(--red)}
+.ph.o .din{background:var(--orgd);color:var(--org)}
+.ph.b .din{background:var(--blud);color:var(--blu)}
+.ph.g .din{background:var(--gd);color:var(--g)}
+.ph.gold .din{background:var(--gld);color:var(--gold)}
+.ph.sv .din{background:rgba(180,180,200,.05);color:var(--sv)}
+.dit{font-size:.8rem;font-weight:700;color:var(--t1);margin-bottom:.2rem}
+.dib{font-size:.75rem;color:var(--t2);line-height:1.7}
+.diow{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);margin-top:.3rem}
+.diow span{
+  display:inline-block;padding:.12rem .42rem;border-radius:3px;
+  background:rgba(255,255,255,.035);margin:.08rem .18rem 0 0;color:var(--t2);
+}
+
+/* ── CARDS ── */
+.card{
+  background:var(--card);border:1px solid var(--brd);border-radius:12px;
+  padding:1.3rem;margin-bottom:.9rem;
+  transition:border-color .3s,transform .3s;
+}
+.card:hover{transform:translateY(-2px)}
+.card.cr{border-color:rgba(255,59,92,.2)}.card.co{border-color:rgba(255,138,0,.2)}
+.card.cg{border-color:rgba(57,255,20,.2)}.card.cb{border-color:rgba(56,189,248,.2)}
+.card.cgold{border-color:rgba(232,160,0,.2)}
+.ct{font-size:.82rem;font-weight:700;margin-bottom:.5rem;color:var(--t1)}
+.cb_{font-size:.78rem;color:var(--t2);line-height:1.72}
+
+/* ── ALERTS ── */
+.al{display:flex;gap:.75rem;padding:.85rem 1rem;border-radius:8px;margin-bottom:.65rem;border:1px solid}
+.al.ar{background:var(--redd);border-color:rgba(255,59,92,.22)}
+.al.ao{background:var(--orgd);border-color:rgba(255,138,0,.18)}
+.al.ag{background:var(--gd);border-color:rgba(57,255,20,.18)}
+.al.ab{background:var(--blud);border-color:rgba(56,189,248,.18)}
+.al .ai{font-size:.95rem;flex-shrink:0;margin-top:.05rem}
+.al .at{font-size:.77rem;font-weight:700;color:var(--t1);margin-bottom:.18rem}
+.al .ab_{font-size:.73rem;color:var(--t2);line-height:1.65}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+@media(max-width:768px){.g2,.g3{grid-template-columns:1fr}}
+
+/* ── TABLES ── */
+.tw{overflow-x:auto;margin:.8rem 0;border-radius:10px;border:1px solid var(--brd)}
+table{width:100%;border-collapse:collapse;font-size:.76rem}
+thead{background:rgba(57,255,20,.06);border-bottom:1px solid var(--br)}
+th{padding:.65rem 1rem;text-align:left;font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--g);white-space:nowrap}
+td{padding:.6rem 1rem;border-bottom:1px solid var(--brd);color:var(--t2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.012)}
+.tg{color:var(--g)!important;font-weight:700}.tr{color:var(--red)!important}
+.to{color:var(--org)!important}.tgold{color:var(--gold)!important}
+.ts{text-decoration:line-through;opacity:.45}
+.tbadge{
+  display:inline-block;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+  padding:.15rem .38rem;border-radius:3px;margin-left:.3rem;
+}
+.tbg{background:var(--gd);color:var(--g)}.tbr{background:var(--redd);color:var(--red)}
+.tbb{background:var(--blud);color:var(--blu)}.tbo{background:var(--orgd);color:var(--org)}
+
+/* ── CALLOUT ── */
+.co_{padding:1.1rem 1.3rem;border-radius:10px;border-left:3px solid;margin:1.1rem 0}
+.co_.cr{background:var(--redd);border-color:var(--red)}
+.co_.cg{background:var(--gd);border-color:var(--g)}
+.co_.co{background:var(--orgd);border-color:var(--org)}
+.co_.cgold{background:var(--gld);border-color:var(--gold)}
+.co_.cb{background:var(--blud);border-color:var(--blu)}
+.co_ h4{font-size:.78rem;margin-bottom:.28rem}
+.co_.cr h4{color:var(--red)}.co_.cg h4{color:var(--g)}
+.co_.co h4{color:var(--org)}.co_.cgold h4{color:var(--gold)}.co_.cb h4{color:var(--blu)}
+.co_ p{font-size:.76rem}
+
+/* ── SITUATION PHASES ── */
+.sphases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:2rem 0}
+@media(max-width:768px){.sphases{grid-template-columns:1fr}}
+.sp{padding:1.4rem;border-radius:12px;border:1px solid}
+.sp.spg{background:rgba(57,255,20,.04);border-color:rgba(57,255,20,.2)}
+.sp.spr{background:var(--redd);border-color:rgba(255,59,92,.25)}
+.sp.spo{background:var(--orgd);border-color:rgba(255,138,0,.2)}
+.splbl{
+  font-size:.56rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;
+  padding:.22rem .65rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;
+}
+.spg .splbl{background:rgba(57,255,20,.12);color:var(--g)}
+.spr .splbl{background:rgba(255,59,92,.15);color:var(--red)}
+.spo .splbl{background:rgba(255,138,0,.15);color:var(--org)}
+.spcpa{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;line-height:1;margin:.35rem 0}
+.spg .spcpa{color:var(--g);text-shadow:var(--glow-sm)}
+.spr .spcpa{color:var(--red)}.spo .spcpa{color:var(--org)}
+.spd{font-size:.72rem;color:var(--t2);line-height:1.65;margin-top:.5rem}
+
+/* ── TIMELINE ── */
+.tl{position:relative;padding-left:2.4rem;margin:1rem 0}
+.tl::before{
+  content:'';position:absolute;left:.55rem;top:4px;bottom:4px;
+  width:2px;background:linear-gradient(to bottom,var(--g),rgba(57,255,20,.08));
+  border-radius:2px;
+}
+.tli{position:relative;margin-bottom:1.6rem}
+.tli:last-child{margin-bottom:0}
+.tldot{
+  position:absolute;left:-1.95rem;top:.25rem;
+  width:11px;height:11px;border-radius:50%;
+  border:2px solid var(--g);background:var(--bg);
+  box-shadow:var(--glow-sm);
+}
+.tlw{font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--g);margin-bottom:.35rem}
+.tltasks{display:flex;flex-direction:column;gap:.28rem}
+.tlt{
+  display:flex;align-items:center;gap:.55rem;
+  font-size:.73rem;color:var(--t2);padding:.38rem .8rem;
+  background:rgba(255,255,255,.022);border-radius:6px;border:1px solid var(--brd);
+  transition:border-color .2s,background .2s;
+}
+.tlt:hover{border-color:var(--br);background:var(--gd2)}
+.tlt::before{content:'→';color:var(--g);font-weight:800;font-size:.65rem;flex-shrink:0}
+.tlown{margin-left:auto;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.13rem .38rem;border-radius:3px;background:rgba(255,255,255,.035);color:var(--t3);white-space:nowrap;flex-shrink:0}
+
+/* ── OPEN ITEMS ── */
+.oi{
+  display:grid;grid-template-columns:1fr auto auto;gap:.8rem;align-items:center;
+  padding:.78rem 1rem;border-radius:8px;
+  background:var(--card);border:1px solid var(--brd);margin-bottom:.45rem;
+  transition:border-color .22s;
+}
+.oi:hover{border-color:var(--br)}
+.oit{font-size:.78rem;font-weight:600;color:var(--t1)}
+.oiown{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;background:rgba(255,255,255,.035);border-radius:4px;color:var(--t2)}
+.oist{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;border-radius:4px}
+.oist.blk{background:rgba(255,59,92,.1);color:var(--red)}
+.oist.pnd{background:rgba(255,138,0,.1);color:var(--org)}
+.oist.ip{background:var(--gd);color:var(--g)}
+
+/* ── SCROLL ANIMATIONS ── */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rvl{opacity:0;transform:translateX(-22px);transition:opacity .65s ease,transform .65s ease}
+.rvl.vis{opacity:1;transform:translateX(0)}
+.rvr{opacity:0;transform:translateX(22px);transition:opacity .65s ease,transform .65s ease}
+.rvr.vis{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ── CONVERSION CORRECTION BOX ── */
+.cfix{
+  display:flex;align-items:flex-start;gap:.75rem;
+  padding:1.1rem 1.3rem;border-radius:10px;
+  background:rgba(255,59,92,.08);border:1px solid rgba(255,59,92,.3);
+  margin-bottom:1.4rem;
+}
+.cfix-icon{font-size:1.3rem;flex-shrink:0;margin-top:.05rem}
+.cfix h4{font-size:.8rem;color:var(--red);margin-bottom:.22rem}
+.cfix p{font-size:.74rem}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid var(--brd);padding:2.5rem 2rem;
+  background:var(--bg2);text-align:center;
+}
+footer .fl{font-size:1rem;font-weight:900;letter-spacing:.05em;color:var(--g);text-shadow:var(--glow-sm);margin-bottom:.3rem}
+footer p{font-size:.65rem;color:var(--t3)}
+
+code{
+  background:rgba(57,255,20,.07);color:var(--g);
+  padding:.1rem .35rem;border-radius:3px;font-size:.72rem;
+  border:1px solid rgba(57,255,20,.15);font-family:monospace;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+  <img class="nav-logo-img" src="data:image/png;base64,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" alt="Auto King">
+  <div class="nl">
+    <a href="#phase1">Phase 1</a>
+    <a href="#phase2">Phase 2</a>
+    <a href="#phase3">Phase 3</a>
+    <a href="#phase4">Phase 4</a>
+    <a href="#phase5">Phase 5</a>
+    <a href="#phase6">Phase 6</a>
+    <a href="#questionnaire">Q&amp;A Updates</a>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="top">
+  <div class="hbg"></div>
+  <div class="scanline"></div>
+  <div class="hi">
+
+    <div class="hbadge rv">Live Account Data · Jun 2025 – May 2026 · Google Ads API + GA4 + Search Console</div>
+
+    <div class="logo-wrap rv d1">
+      <div class="logo-css">
+        <div class="logo-wordmark">
+          <span class="lw-a">AUTO</span><span class="lw-k">KING</span><span class="lw-r">®</span>
+        </div>
+        <div class="lw-sub">Mobile&nbsp;Mechanics</div>
+      </div>
+      <div class="logo-tagline">
+        <span class="gn">We Come to You</span>
+        <span>Fast &amp; Reliable</span>
+        <span>Quality Guaranteed</span>
+      </div>
+    </div>
+
+    <div class="htitle rv d2">
+      <span class="line1">Paid Media · Plan of Action · June 2026</span>
+      <h1>Fixing the Foundation.<br><span class="ac">Scaling What Works.</span></h1>
+    </div>
+
+    <div class="hmeta rv d3">
+      <span class="hm">Account <strong>108-264-3572</strong></span>
+      <div class="hd"></div>
+      <span class="hm">A$452/day active spend</span>
+      <div class="hd"></div>
+      <span class="hm">13 campaigns · 12 PMax · 1 Search</span>
+      <div class="hd"></div>
+      <span class="hm">Prepared by Shamsher · SR Digital</span>
+    </div>
+
+    <div class="kpi-grid rv d4">
+      <div class="kc kgold"><div class="kv" data-target="72717" data-prefix="A$">A$0</div><div class="kl">12-Month<br>Total Spend</div></div>
+      <div class="kc kr"><div class="kv" data-target="25.01" data-prefix="A$" data-dec="2">A$0</div><div class="kl">Peak CPA<br>Apr 2026</div></div>
+      <div class="kc kg"><div class="kv" data-target="6.28" data-prefix="A$" data-dec="2">A$0</div><div class="kl">Benchmark CPA<br>To Return To</div></div>
+      <div class="kc kr"><div class="kv" data-target="33" data-suffix="+ days">0</div><div class="kl">Form Tracking<br>Dead (Min)</div></div>
+      <div class="kc ko"><div class="kv" data-target="33" data-suffix=" groups">0</div><div class="kl">Asset Groups<br>All Average</div></div>
+      <div class="kc kr"><div class="kv" data-target="67" data-suffix="%">0%</div><div class="kl">IS Rank Lost<br>Avg All Campaigns</div></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══════════ PHASE 1 ══════════ -->
+<section class="sw" id="phase1">
+<div class="si">
+  <div class="ph r rv">
+    <div class="phn">1</div>
+    <div class="phm">
+      <div class="phtag">Week 1 · Non-Negotiable Foundation</div>
+      <h3>Fix the Tracking Foundation — GTM Container Rebuild (GTM-PXJ5HH7)</h3>
+      <p>Nothing in this account can be trusted, scaled, or meaningfully optimised until measurement is clean. Every other phase depends on this completing successfully.</p>
+    </div>
+  </div>
+
+  <div class="co_ cr rv d1">
+    <h4>Why rebuild, not patch — 8 confirmed structural faults</h4>
+    <p>Call conversion tag misfiring on All Pages with no duration minimum · Single form tag A$1 fallback for all services · Google Ads domain set to "asdf.com" (not autoking.com.au) causing "Not installed yet" warning · No GCLID capture anywhere · No UTM parameter capture · Fragile Elementor visibility trigger (not a custom event) · URL passthrough disabled on Conversion Linker · No consent mode · Three simultaneous phone tracking systems with zero deduplication. Patching takes longer, carries residual error risk, and produces a container we cannot stand behind.</p>
+  </div>
+
+  <div class="ph r">
+  <div class="dl rv d2">
+
+    <div class="di">
+      <div class="din">1.1</div>
+      <div>
+        <div class="dit">Create thank-you pages + all service-specific PPC landing pages</div>
+        <div class="dib">Thank-you pages required (5): <code>/thank-you-roadworthy</code> · <code>/thank-you-prepurchase</code> · <code>/thank-you-pinkslip</code> · <code>/thank-you-carservice</code> · <code>/thank-you-diagnosis</code>. Simple confirmation pages — no form. These are the GTM conversion triggers.
+          <br><br>
+          SR Digital builds all service-specific PPC landing pages. <strong style="color:var(--t1)">Priority 1 — Roadworthy</strong> (~50–60% of business): H1 matches ad headline. "From A$129 — confirmed before we arrive" above fold. Tap-to-call CTA prominent. Form: name, phone, suburb, car make/year. Trust: 4.9★ + 15,000+ certificates. FAQ: "Do I need a roadworthy?" "How long?" "What if it fails?"
+          <br><br>
+          <strong style="color:var(--t1)">Priority 2 — Pre-Purchase</strong> (A$299+): Lead with "Your mechanic shows you every issue in person, before you sign anything." This addresses the core anxiety at the decision point.
+          <br><br>
+          <strong style="color:var(--t1)">Priority 3 — Car Service</strong> (A$350, 305K organic impressions at position 36, zero paid coverage): Address the "why mobile?" objection — "We come to your home or office. No waiting room, no drop-off."
+          <br><br>
+          H1 rule: every landing page H1 must exactly match the ad headline it receives traffic from. This is how Landing Page Experience quality score improves. GTM rebuild cannot be QA'd until all pages are live.</div>
+        <div class="diow"><span>SR Digital</span> builds all pages · <span>Jay</span> WordPress access / domain</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">1.2</div>
+      <div>
+        <div class="dit">GTM container rebuild — clean from scratch</div>
+        <div class="dib">9 variables (GCLID cookie, UTM params ×5, service type, page path) · 6 triggers (5 × thank-you URL page views + 1 call duration trigger) · 14 tags (Google Ads conversion per service type, GA4 events, Facebook Pixel) · Cookie-based GCLID capture on every form page load · UTM parameters captured as hidden form fields and passed into Monday.com · URL passthrough enabled · Consent mode configured · Single call conversion replaces three conflicting phone systems.</div>
+        <div class="diow"><span>SR Digital</span> · Week 1 (after pages live)</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">1.3</div>
+      <div>
+        <div class="dit">Assign revised service-specific conversion values in Google Ads</div>
+        <div class="dib">Once thank-you pages are live: Roadworthy A$52 · Pre-Purchase A$60 (critical correction — was A$120, Jay confirmed 20% close rate) · Car Service A$105 · Pink Slip A$44 · Diagnostics A$60 · Phone calls 60s+ A$65. The algorithm has been weighting a Pre-Purchase lead at 2× its real value — this contributed to CPA degradation independent of the tracking collapse.</div>
+        <div class="diow"><span>SR Digital</span> · Week 1 (after pages live)</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">1.4</div>
+      <div>
+        <div class="dit">Configure Enhanced Conversions</div>
+        <div class="dib">Hashes and passes phone numbers captured on forms to recover conversions lost to cross-device journeys. 93% of traffic is mobile — this recovers more here than on any desktop-first account. One-time GTM configuration step, no ongoing maintenance.</div>
+        <div class="diow"><span>SR Digital</span> · Week 1</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══════════ PHASE 2 ══════════ -->
+<section class="sw2" id="phase2">
+<div class="si">
+  <div class="ph o rv">
+    <div class="phn">2</div>
+    <div class="phm">
+      <div class="phtag">Begins After Phase 1 · Zero Creative Dependency</div>
+      <h3>Immediate Campaign Hygiene — Quick Wins</h3>
+      <p>Low-effort fixes with confirmed waste attached. All executable directly in the Google Ads account. Begins once Phase 1 tracking is in place.</p>
+    </div>
+  </div>
+
+  <div class="ph o">
+  <div class="dl rv d1">
+
+    <div class="di">
+      <div class="din">2.1</div>
+      <div>
+        <div class="dit">Apply negative keyword list to all 9 uncovered campaigns</div>
+        <div class="dib">A negative list exists and is applied to 3 of 12 campaigns (Brisbane North, Sunshine Coast South, Brisbane CBD). The remaining 9 — including Gold Coast (best CPA in the account) — have zero negative coverage. Create a shared negative keyword list in Google Ads → Shared Library → apply to all 12 campaigns. Existing terms to retain: "affordable", "$99", "afterpay", "autobarn". Add: "auto electrician" / "auto electrical" (confirmed not offered — appeared in Brisbane South search terms), "cheap", "diy", "how to", "parts".</div>
+        <div class="diow"><span>SR Digital</span> · Week 2</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">2.2</div>
+      <div>
+        <div class="dit">Exclude Connected TV device — A$129 confirmed wasted, zero conversions</div>
+        <div class="dib">A$129 spent on Connected TV with zero conversions. A mobile mechanic booking service generates no meaningful revenue from a living room screen. Campaign settings → Devices → Exclude Connected TV. Two minutes.</div>
+        <div class="diow"><span>SR Digital</span> · Week 2</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">2.3</div>
+      <div>
+        <div class="dit">Fix 3 misdirected asset group landing page URLs — under 10 minutes total</div>
+        <div class="dib"><strong style="color:var(--t1)">Townsville Roadworthy → correct service page.</strong> Townsville has A$1.07 CPC (lowest in the account) and 1,137 clicks but only 8.62% CVR. Cairns delivers 30.63% CVR on the same service with a correctly pointed URL. If Townsville matched Cairns' CVR, it would deliver 348 conversions instead of 98 — CPA drops from A$12.37 to A$3.48. The traffic is good. The landing page is wrong. Also fix: Cairns Pre-Purchase → <code>/mobile-pre-purchase-car-inspections.html</code> · Sunshine Coast North Pre-Purchase → same.</div>
+        <div class="diow"><span>SR Digital</span> · Week 2</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">2.4</div>
+      <div>
+        <div class="dit">Sydney Search: add +25% mobile bid adjustment</div>
+        <div class="dib">Manual campaign (not PMax). 96% of clicks are mobile (1,146 of 1,190) but no mobile bid adjustment exists — bids identically on mobile and desktop. A$22.22 CPA and A$4.49 avg CPC vs A$1.51–2.82 for Queensland PMax. The structural fix is a PMax migration (Phase 5). The +25% mobile adjustment is the correct interim step.</div>
+        <div class="diow"><span>SR Digital</span> · Week 2</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">2.5</div>
+      <div>
+        <div class="dit">Pause Sunshine Coast North — under review</div>
+        <div class="dib">A$19.09 CPA, 12.92% CVR, 67.9% IS rank lost. Worst-performing active campaign. A$1,852 spent over 12 months generating 97 conversions. Pause while Phase 4 asset group rewrites are completed. Confirm with Jay that Auto King still actively services this area before pausing.</div>
+        <div class="diow"><span>SR Digital</span> confirm with <span>Jay</span> · Day 2–3</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══════════ PHASE 3 ══════════ -->
+<section class="sw" id="phase3">
+<div class="si">
+  <div class="ph b rv">
+    <div class="phn">3</div>
+    <div class="phm">
+      <div class="phtag">Weeks 2–6 · The Gold Standard Signal</div>
+      <h3>Close the Conversion Loop — Offline Tracking &amp; Call Attribution</h3>
+      <p>Phases 1 and 2 restore functional tracking. Phase 3 is what moves the account from recovering to genuinely optimised. The difference between a A$10.86 blended CPA and a A$6.28 CPA runs through this phase.</p>
+    </div>
+  </div>
+
+  <div class="g2 rv d1">
+    <div>
+      <div class="card cb">
+        <div class="ct" style="color:var(--blu)">Monday.com → Zapier → Google Ads Offline Conversion</div>
+        <div class="cb_">
+          The account currently tells Google Ads "this person submitted a form." With offline conversion import, we tell it "this person submitted a form, booked a job, and paid A$349." Smart Bidding then optimises toward actual revenue — not lead volume.
+          <br><br>
+          <strong style="color:var(--t1)">Technical flow:</strong> User clicks ad → GCLID generated → GTM captures GCLID in cookie → user submits form → GCLID + UTM passed as hidden fields into Monday.com → Peter marks job "Booked/Won" → Zapier fires → Google Ads Offline Conversion API receives GCLID + actual job value.
+          <br><br>
+          <strong style="color:var(--t1)">Conversion window: 7 days.</strong> Jay confirmed speed to lead is under 15 minutes and bookings confirm same day. 7 days covers edge cases without polluting signal with late-attributed conversions.
+          <br><br>
+          <strong style="color:var(--t1)">ROAS bidding trigger:</strong> Once 90 days of offline data with 30+ confirmed jobs per campaign — switch Brisbane and Gold Coast to Target ROAS.
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card co">
+        <div class="ct" style="color:var(--org)">Aircall Attribution — Call Source Tracking</div>
+        <div class="cb_">
+          ~67% of leads come via phone. Jay confirmed phone leads close faster and at a higher rate than form fills. At peak times, inbound calls take priority over form submissions. Team calls back form fills 3× back-to-back then sends an SMS — more friction and more drop-off.
+          <br><br>
+          <strong style="color:var(--t1)">Action from Jay:</strong> Confirm whether Aircall's native Google Ads integration is active. If yes, call data flows back automatically. If not, implement manual reconciliation: Aircall number → campaign mapping in a tracking sheet, reconciled weekly with Google Ads click data.
+          <br><br>
+          <strong style="color:var(--t1)">Phone vs form values:</strong> Phone call conversions warrant a higher conversion value than form fills for the same service — Jay confirmed the differential close rate (Q11). Assign A$65 to calls vs A$52 to form fills for Roadworthy as a starting point.
+        </div>
+      </div>
+      <div class="card" style="margin-top:.8rem;border-color:rgba(255,59,92,.2)">
+        <div class="ct" style="color:var(--red)">Access Still Outstanding — Blocking Phase 3</div>
+        <div class="cb_">Jay's questionnaire Q16 confirmed Monday.com and Aircall access are not yet granted to srdg.ppc@gmail.com. Monday.com is blocking Peter's pipeline build. Aircall is blocking call attribution config. Both must be chased via WhatsApp this week.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══════════ PHASE 4 ══════════ -->
+<section class="sw2" id="phase4">
+<div class="si">
+  <div class="ph g rv">
+    <div class="phn">4</div>
+    <div class="phm">
+      <div class="phtag">Weeks 3–8 · The Relevance Recovery</div>
+      <h3>Asset Groups &amp; Ad Quality</h3>
+      <p>33 asset groups rated Average, all sending traffic to the homepage. mr-roadworthy.com.au outranks Auto King in 67.75% of shared auctions with under 10% IS. Their advantage is service specificity. These tasks close that gap. PPC landing pages are being built in Phase 1 — this phase focuses on ad content, audience quality, and copy.</p>
+    </div>
+  </div>
+
+  <div class="ph g">
+  <div class="dl rv d1">
+
+    <div class="di">
+      <div class="din">4.1</div>
+      <div>
+        <div class="dit">Rewrite all asset group descriptions — service-specific per group</div>
+        <div class="dib">Generic descriptions identical across all 33 asset groups is the primary reason Ad Strength is Average everywhere. Google's relevance scoring cannot distinguish a Roadworthy asset group from a Mechanics group when both descriptions say the same thing. Three description templates minimum, one per service type. Each must: use the service keyword in the first description · reference the geographic market · include a trust signal · anchor the price ("From A$X, confirmed before we arrive").
+          <br><br>
+          <strong style="color:var(--t1)">Jay confirmed the headline direction (Q12+Q13):</strong> "People wanting today is very common." Every headline leads with same-day availability — not convenience generally, not price. 4.9★ rating + 15,000+ certificates issued confirmed by Jay — neither appears in current copy. Use in all asset groups. "Your mechanic shows you the issues" is the Pre-Purchase specific differentiator that addresses the buyer's core anxiety.</div>
+        <div class="diow"><span>SR Digital</span> writes · <span>Jay</span> approves copy · <span>SEO Jai</span> keyword conflict check</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">4.2</div>
+      <div>
+        <div class="dit">Add Car Servicing and Diagnostics asset groups</div>
+        <div class="dib">Car Service: 305,457 annual organic impressions, position 36.1, zero paid coverage in any of 12 campaigns. A$350, 30% close rate, A$105 conversion value (confirmed by Jay's questionnaire). Diagnostics: zero paid coverage. A$149, 40% close rate, A$60 conversion value. Both need service-specific asset groups — PPC landing pages are being built in Phase 1. Car Service copy must directly address the "why mobile?" objection.</div>
+        <div class="diow"><span>SR Digital</span> · Weeks 5–6</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">4.3</div>
+      <div>
+        <div class="dit">Reset audience signals — tracking-break data is polluted</div>
+        <div class="dib">"All Visitors" and "All Converters" audience lists were built during the tracking breakdown (Sep 2025–Feb 2026). They contain users from broken landing pages and phantom conversions. Once GTM is live with 30 days of clean GA4 data, create new audience signals: "30-day clean visitors" · "Form submitters post-rebuild" · "Phone callers 60s+." Apply to all PMax campaigns. Do not use existing audiences until reset.</div>
+        <div class="diow"><span>SR Digital</span> · Week 3 (create) → Week 6 (apply to campaigns)</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">4.4</div>
+      <div>
+        <div class="dit">Fix two confirmed brand messaging errors in ads</div>
+        <div class="dib">"WE CAN BEAT ANY PRICE!" attracts price-sensitive customers who compare Auto King to cheap workshops — wrong customer, wrong expectation. Auto King's advantage is mobile convenience and speed. Replace with "From A$X, confirmed before we arrive." Also: "Qualified Workshop Mechanics" contradicts the mobile service model. A mobile customer reading "Workshop Mechanics" experiences an immediate message mismatch. Replace with "Mobile-Only Inspectors — We Come to You."</div>
+        <div class="diow"><span>SR Digital</span> recommends · <span>Jay</span> approves any website copy changes</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══════════ PHASE 5 ══════════ -->
+<section class="sw" id="phase5">
+<div class="si">
+  <div class="ph gold rv">
+    <div class="phn">5</div>
+    <div class="phm">
+      <div class="phtag">Weeks 6–12 · Infrastructure 80% Built</div>
+      <h3>NSW Activation &amp; Geographic Scale</h3>
+      <p>Five PMax campaigns already exist in the account — named, structured, never activated. 76,495 annual Pink Slip organic impressions confirmed from Search Console with zero paid coverage today.</p>
+    </div>
+  </div>
+
+  <div class="g2 rv d1" style="margin-bottom:1.2rem">
+    <div class="al ar"><div class="ai">🔴</div><div><div class="at">Sydney West — all asset groups disapproved by Google. Investigate before anything else in NSW.</div><div class="ab_">Every asset group in PMax Sydney West has been rejected. The campaign cannot serve a single impression. Check Policy Manager for the specific disapproval reason (likely: misleading price claims in headlines, destination mismatch, or restricted content flag). Fix before any other NSW work.</div></div></div>
+    <div class="al ao"><div class="ai">⚠️</div><div><div class="at">NSW requires Pink Slip asset groups — QLD Roadworthy copy will not convert NSW traffic</div><div class="ab_">NSW customers search "pink slip", not "roadworthy certificate." Any NSW asset group using QLD roadworthy themes will fail on intent match. All NSW copy must use Pink Slip terminology. Jay confirmed: A$145 starting price, 30% close rate, A$44 conversion value. Note from Jay: "people expect A$51 workshop price and are surprised by the mobile premium" — ad copy must lead with the value of mobile, not compete on price.</div></div></div>
+  </div>
+
+  <div class="ph gold">
+  <div class="dl rv d2">
+
+    <div class="di">
+      <div class="din">5.1</div>
+      <div>
+        <div class="dit">Sydney West — investigate and fix disapproval first</div>
+        <div class="dib">Check Policy Manager inside the campaign for the specific reason. Fix ad content. No amount of targeting or bid adjustment will make this campaign serve until every disapproval is resolved.</div>
+        <div class="diow"><span>SR Digital</span> · Week 6</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">5.2</div>
+      <div>
+        <div class="dit">Newcastle + Central Coast — build Pink Slip asset groups and activate</div>
+        <div class="dib">Both campaigns are paused and structurally ready. 76,495 annual Pink Slip organic impressions confirmed. Required before activation: NSW Pink Slip asset group (separate from Roadworthy, Pink Slip terminology throughout) · dedicated Pink Slip landing page built by SR Digital · thank-you URL <code>/thank-you-pinkslip</code>. Conversion value: A$44.</div>
+        <div class="diow"><span>SR Digital</span> (asset groups + landing page) · Weeks 7–9</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">5.3</div>
+      <div>
+        <div class="dit">Sydney Search campaign → PMax migration</div>
+        <div class="dib">Sydney Search: A$22.22 CPA at A$4.49 avg CPC. Queensland PMax: A$1.51–A$2.82 avg CPC. The reason is structural — manual keyword auction bidding vs PMax portfolio bidding. Plan: build 5 Sydney geo-specific PMax asset groups (Inner West, South Sydney, Western Sydney, Northern Beaches, Eastern Suburbs) with Sydney-specific search themes. Phase out Search campaign once PMax generates stable conversions over 30 days.</div>
+        <div class="diow"><span>SR Digital</span> · Weeks 7–8</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">5.4</div>
+      <div>
+        <div class="dit">Scale Gold Coast — best CPA economics in the account</div>
+        <div class="dib">Gold Coast North A$9.77 CPA · Gold Coast South A$9.87 CPA. Best numbers outside Cairns. At 15–16% IS the account wins only 1 in 6 auctions in a market where it already performs well. Trigger for budget increase: once Phase 4 landing pages and descriptions are live and Ad Rank improves. IS Budget Lost is only 13–16% for Gold Coast — quality is the constraint, not budget. Do not increase budget before quality improves.</div>
+        <div class="diow"><span>SR Digital</span> · Weeks 8–10 post-Phase 4</div>
+      </div>
+    </div>
+
+    <div class="di">
+      <div class="din">5.5</div>
+      <div>
+        <div class="dit">Verify Wollongong and Port Macquarie coverage, then build</div>
+        <div class="dib">Both campaigns exist and are paused. Confirm with Jay that Auto King has active mechanics servicing these areas. If confirmed, build Pink Slip asset groups and activate. If not, keep paused indefinitely.</div>
+        <div class="diow"><span>Jay</span> (confirm coverage) → <span>SR Digital</span> (build if confirmed) · Week 8</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══════════ PHASE 6 ══════════ -->
+<section class="sw2" id="phase6">
+<div class="si">
+  <div class="ph sv rv">
+    <div class="phn">6</div>
+    <div class="phm">
+      <div class="phtag">Ongoing from Week 1</div>
+      <h3>Reporting, Governance &amp; Future Phases</h3>
+      <p>Primary metrics are CPA and actual booked jobs. Not CTR. Not impressions. Not optimisation score.</p>
+    </div>
+  </div>
+
+  <div class="g2 rv d1">
+    <div>
+      <div class="card">
+        <div class="ct">Reporting Cadence</div>
+        <div class="cb_"><strong style="color:var(--t1)">Reported weekly:</strong> Actual form conversions (GA4 CPC — not Google Ads reported) · CPA by campaign, segmented by service type post-GTM · IS % and IS rank lost % · Offline conversion uploads once pipeline live.
+        <br><br><strong style="color:var(--t1)">Reported monthly:</strong> CVR by service type · Revenue per lead (once offline flows) · Campaign ROAS (once 90 days of offline data available).
+        <br><br><strong style="color:var(--t1)">Calls:</strong> Bi-weekly strategy calls with Jay and team — first 30 minutes account performance, second 30 minutes forward planning. Monthly deep-dive including budget review and phase progression check.
+        <br><br><strong style="color:var(--t1)">Format:</strong> WhatsApp group update weekly (5 bullets max) · Looker Studio dashboard shared with Jay, Peter, Joel.</div>
+      </div>
+      <div class="card" style="margin-top:.8rem">
+        <div class="ct">The GA4 vs Google Ads Gap — Ongoing Flag</div>
+        <div class="cb_">GA4 and Google Ads use different attribution models and different conversion windows. The gap will narrow as clean data accumulates. If it remains large after 30 days of clean tracking, it points to a remaining duplicate conversion action or tag firing issue — investigate the container before escalating.</div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="ct">SEO / Paid Keyword Alignment — Ongoing with Jai</div>
+        <div class="cb_">SR Digital is building dedicated PPC landing pages — there is no URL dependency on Jai's organic pages. The alignment needed is at the keyword level only: ensure paid campaigns are not buying traffic for keywords Jai's organic work already converts at a lower cost, and ensure paid copy does not conflict with organic brand positioning.
+        <br><br><strong style="color:var(--t1)">Protocol:</strong> Bi-weekly alignment review. Share paid keyword performance data with Jai — flag any terms where organic position has improved to top 3 and paid spend on that term may be redundant.</div>
+      </div>
+      <div class="card" style="margin-top:.8rem;border-color:rgba(56,189,248,.2)">
+        <div class="ct" style="color:var(--blu)">Meta — Future Phase (Month 3–4)</div>
+        <div class="cb_">Organic traffic down significantly since AI update late 2025 (was ~14,000 enquiries/month). Auto King currently does demand capture only. Meta awareness builds the audience before they search. Activate once Google Ads CPA returns to A$6.28–6.60 benchmark and Monday.com pipeline has 60+ days of revenue data.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════ QUESTIONNAIRE UPDATES ══════════ -->
+<section class="sw2" id="questionnaire">
+<div class="si">
+  <div class="shd rv">
+    <div class="stag">Questionnaire Updates — Jay's Responses</div>
+    <h2>What the questionnaire changes, confirms, and adds.</h2>
+    <p>Jay's completed questionnaire materially updates four items. One is a critical correction that must be applied before the GTM go-live.</p>
+  </div>
+
+  <div class="cfix rv d1">
+    <div class="cfix-icon">🔴</div>
+    <div>
+      <h4>CRITICAL CORRECTION — Pre-Purchase Conversion Value: A$120 → A$60</h4>
+      <p>The initial POA used A$120 (A$299 × 40% blended close rate). Jay confirmed the Pre-Purchase close rate is 20% — two parties must coordinate (buyer + seller availability). This is structural friction that no ad copy or lower CPC can fix. Correct value: A$299 × 20% = A$59.80 → use A$60. The algorithm has been over-bidding for Pre-Purchase leads by approximately 2×. This contributed to CPA degradation independent of the tracking collapse. Do not use A$120 anywhere from this point forward.</p>
+    </div>
+  </div>
+
+  <div class="rv d2">
+    <h4 style="margin-bottom:.8rem">Revised Conversion Value Table — All Services (Post-Questionnaire)</h4>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Service</th><th>Starting Price</th><th>Close Rate (Jay)</th><th>Conversion Value</th><th>Previous POA</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Roadworthy Certificate</td><td>A$129</td><td>40%</td><td class="tg">A$52</td><td>A$52</td><td><span class="tbadge tbg">✓ Confirmed</span></td></tr>
+          <tr><td>Pre-Purchase Inspection</td><td>A$299</td><td>20% <em style="font-size:.65rem;color:var(--t3)">(two-party coordination)</em></td><td class="tg">A$60</td><td><span class="ts tr">A$120</span></td><td><span class="tbadge tbr">🔴 Corrected</span></td></tr>
+          <tr><td>Car Service / Logbook</td><td>A$350</td><td>30%</td><td class="tg">A$105</td><td>— <em style="font-size:.65rem;color:var(--t3)">(was assumed A$220)</em></td><td><span class="tbadge tbb">🆕 New data</span></td></tr>
+          <tr><td>Pink Slip (NSW)</td><td>A$145</td><td>30% <em style="font-size:.65rem;color:var(--t3)">(price perception gap)</em></td><td class="tg">A$44</td><td>—</td><td><span class="tbadge tbb">🆕 New data</span></td></tr>
+          <tr><td>Diagnostics</td><td>A$149</td><td>40% <em style="font-size:.65rem;color:var(--t3)">(breakdown urgency)</em></td><td class="tg">A$60</td><td>—</td><td><span class="tbadge tbb">🆕 New data</span></td></tr>
+          <tr><td>Repairs (avg ticket)</td><td>A$415</td><td><span class="to">Not specified by Jay</span></td><td class="to">~A$145 est.</td><td>—</td><td><span class="tbadge tbo">⚠ Estimate</span></td></tr>
+          <tr><td>Phone Call (60s+)</td><td>—</td><td>Higher than form (Q11)</td><td class="tg">A$65 (Roadworthy basis)</td><td>A$52</td><td><span class="tbadge tbb">Updated</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="g3 rv d3" style="margin-top:1.5rem">
+    <div class="card cg">
+      <div class="ct" style="color:var(--g)">What the questionnaire confirms</div>
+      <div class="cb_">Roadworthy conversion value (~A$52) correct · 60-second call threshold appropriate · Roadworthy as priority 1 correct · Same-day urgency messaging direction confirmed · Negative keyword approach is right · Non-genuine calls under 5%</div>
+    </div>
+    <div class="card cr">
+      <div class="ct" style="color:var(--red)">What the questionnaire changes</div>
+      <div class="cb_">Pre-Purchase value A$120 → A$60 (apply immediately) · Car Service price A$350 not A$220 as assumed · Conversion window 7 days not 60 days · Phone calls warrant higher value than form fills</div>
+    </div>
+    <div class="card co">
+      <div class="ct" style="color:var(--org)">Ad copy direction confirmed by Jay</div>
+      <div class="cb_">"People wanting today is very common" → every headline leads with same-day urgency · "Speak with your own mechanic who shows you the issues" → Pre-Purchase specific differentiator · 4.9★ + 15,000+ certificates → use in all asset groups, currently absent from all copy</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="fl">AUTO<span style="color:var(--sv)">KING</span></div>
+  <p>Paid Media Plan of Action · Account 108-264-3572</p>
+  <p style="margin-top:.3rem">Prepared by <strong style="color:var(--g)">Shamsher · SR Digital</strong> · June 2026</p>
+  <p style="margin-top:.3rem">All data sourced from Google Ads API, GA4, Google Search Console, and client questionnaire. Jun 2025–May 2026.</p>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ──
+const els = document.querySelectorAll('.rv,.rvl,.rvr');
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting){ x.target.classList.add('vis'); obs.unobserve(x.target); }});
+}, {threshold:0.07, rootMargin:'0px 0px -30px 0px'});
+els.forEach(el => obs.observe(el));
+
+// ── COUNTER ANIMATION ──
+function counter(el){
+  const target = parseFloat(el.dataset.target);
+  const pre = el.dataset.prefix||'';
+  const suf = el.dataset.suffix||'';
+  const dec = parseInt(el.dataset.dec||'0');
+  const dur = 1800;
+  const start = performance.now();
+  function tick(now){
+    const p = Math.min((now-start)/dur,1);
+    const e = 1-Math.pow(1-p,3);
+    const v = target*e;
+    el.textContent = pre+(dec>0?v.toFixed(dec):Math.floor(v).toLocaleString())+suf;
+    if(p<1) requestAnimationFrame(tick);
+    else el.textContent = pre+(dec>0?target.toFixed(dec):target.toLocaleString())+suf;
+  }
+  requestAnimationFrame(tick);
+}
+const kvs = document.querySelectorAll('.kv[data-target]');
+const kobs = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting){ counter(x.target); kobs.unobserve(x.target); }});
+},{threshold:0.5});
+kvs.forEach(el => kobs.observe(el));
+
+// ── NAV ACTIVE STATE ──
+const secs = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nl a');
+const nobs = new IntersectionObserver(e => {
+  e.forEach(x => {
+    if(x.isIntersecting){
+      links.forEach(a => a.classList.toggle('act', a.getAttribute('href')==='#'+x.target.id));
+    }
+  });
+},{threshold:0.25});
+secs.forEach(s => nobs.observe(s));
+</script>
+</body>
+</html>
